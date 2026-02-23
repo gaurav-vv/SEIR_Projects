@@ -68,15 +68,17 @@ if len(sys.argv) < 3:
     print("Please provide TWO URLs")
     sys.exit()
 
+
 url1 = sys.argv[1]
-text1 = get_body_txt(url1)
-freq1 = freq_of_words(text1)
-hash1 = simhash(freq1)
-
-
 url2 = sys.argv[2]
+
+text1 = get_body_txt(url1)
 text2 = get_body_txt(url2)
+
+freq1 = freq_of_words(text1)
 freq2 = freq_of_words(text2)
+
+hash1 = simhash(freq1)
 hash2 = simhash(freq2)
 
 common = common_bits_count(hash1, hash2)
