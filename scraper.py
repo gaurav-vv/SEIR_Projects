@@ -8,6 +8,10 @@ if len(sys.argv) < 2:
     sys.exit(1)
 
 url = sys.argv[1]
+
+if not url.startswith("http"):
+    url = "https://" + url
+    
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 }
